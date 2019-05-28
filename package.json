@@ -1,0 +1,37 @@
+{
+    "name": "mud-node",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "module": "src/main.js",
+    "license": "MIT",
+    "dependencies": {
+        "bufferutil": "^3.0.5",
+        "esm": "^3.0.32",
+        "express": "^4.16.3",
+        "loglevel": "^1.6.1",
+        "socket.io": "^2.1.0",
+        "telnet-stream": "^1.0.4",
+        "utf-8-validate": "^4.0.2",
+        "ws": "^5.1.1"
+    },
+    "scripts": {
+        "start": "supervisor --watch package.json,servers.json,src --extensions js,json src/index.js",
+        "docker-publish": "docker build --build-arg NODE_ENV=production -t seanson/mud-node-test . && docker push seanson/mud-node-test"
+    },
+    "devDependencies": {
+        "babel-eslint": "^8.2.3",
+        "eslint": "^4.19.1",
+        "eslint-config-airbnb": "^16.1.0",
+        "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-config-standard": "^11.0.0",
+        "eslint-plugin-babel": "^5.1.0",
+        "eslint-plugin-import": "^2.11.0",
+        "eslint-plugin-jsx-a11y": "^6.0.3",
+        "eslint-plugin-node": "^6.0.1",
+        "eslint-plugin-promise": "^3.7.0",
+        "eslint-plugin-react": "^7.8.2",
+        "eslint-plugin-standard": "^3.1.0",
+        "supervisor": "^0.12.0"
+    }
+}
