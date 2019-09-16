@@ -11,7 +11,7 @@
         "loglevel": "^1.6.1",
         "socket.io": "^2.1.0",
         "telnet-stream": "^1.0.4",
-        "utf-8-validate": "^4.0.2",
+        "utf-8-validate": "^5.0.2",
         "ws": "^5.1.1"
     },
     "scripts": {
