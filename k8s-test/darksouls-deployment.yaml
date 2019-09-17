@@ -1,0 +1,36 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.17.0 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: deadsouls
+  name: deadsouls
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: deadsouls
+    spec:
+      containers:
+      - image: clockworksoul/dead-souls:latest
+        name: deadsouls
+        ports:
+        - containerPort: 6666
+        resources: {}
+        volumeMounts:
+        - mountPath: /home/mud/ds/lib/
+          name: deadsouls-claim0
+      restartPolicy: Always
+      volumes:
+      - name: deadsouls-claim0
+        hostPath:
+          # directory location on host
+          path: /var/lib/k8s/souls
+status: {}

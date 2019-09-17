@@ -1,27 +1,7 @@
 [
     {
-        "name": "localhost",
-        "host": "localhost",
+        "name": "deadsouls-k8s",
+        "host": "deadsouls.deadsouls.svc",
         "port": 6666
-    },
-    {
-        "name": "darksouls-docker",
-        "host": "darksouls",
-        "port": 6666
-    },
-    {
-        "name": "Avendar",
-        "host": "avendar.net",
-        "port": 9999
-    },
-    {
-        "name": "aardwolf",
-        "host": "aardmud.org",
-        "port": 4000
-    },
-    {
-        "name": "EOT",
-        "host": "eotmud.com",
-        "port": 4000
     }
 ]
