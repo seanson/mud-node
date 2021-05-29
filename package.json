@@ -12,7 +12,7 @@
         "socket.io": "^2.1.0",
         "telnet-stream": "^1.0.4",
         "utf-8-validate": "^5.0.2",
-        "ws": "^5.1.1"
+        "ws": "^7.4.6"
     },
     "scripts": {
         "start": "supervisor --watch package.json,servers.json,src --extensions js,json src/index.js",
